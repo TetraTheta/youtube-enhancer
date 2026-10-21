@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube Enhancer 설정</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" href="options.css" />
+    <script src="../src/defaults.js" defer></script>
+    <script src="options.js" defer></script>
+  </head>
+  <body>
+    <main class="settings">
+      <header class="settings__header">
+        <p class="settings__eyebrow">YouTube Enhancer · 0.1.0</p>
+        <h1>재생 설정</h1>
+        <p>설정은 저장 즉시 열린 YouTube 플레이어에 적용됩니다.</p>
+      </header>
+
+      <section class="settings__section" aria-labelledby="quality-heading">
+        <h2 id="quality-heading">초기 화질</h2>
+        <p class="settings__hint">선택한 화질이 없으면 이용 가능한 낮은 화질을 사용합니다.</p>
+        <div class="settings__grid">
+          <label class="settings__field" for="qualityVideo">
+            일반 영상
+            <select id="qualityVideo" data-setting="qualityVideo"></select>
+          </label>
+          <label class="settings__field" for="qualityVideoFullscreen">
+            일반 영상 · 전체화면
+            <select id="qualityVideoFullscreen" data-setting="qualityVideoFullscreen"></select>
+          </label>
+          <label class="settings__field" for="qualityPlaylist">
+            재생목록
+            <select id="qualityPlaylist" data-setting="qualityPlaylist"></select>
+          </label>
+          <label class="settings__field" for="qualityPlaylistFullscreen">
+            재생목록 · 전체화면
+            <select id="qualityPlaylistFullscreen" data-setting="qualityPlaylistFullscreen"></select>
+          </label>
+          <label class="settings__field" for="qualityEmbed">
+            임베드 플레이어
+            <select id="qualityEmbed" data-setting="qualityEmbed"></select>
+          </label>
+          <label class="settings__field" for="qualityEmbedFullscreen">
+            임베드 · 전체화면
+            <select id="qualityEmbedFullscreen" data-setting="qualityEmbedFullscreen"></select>
+          </label>
+        </div>
+      </section>
+
+      <section class="settings__section" aria-labelledby="playback-heading">
+        <h2 id="playback-heading">재생 동작</h2>
+        <label class="settings__toggle" for="setInitialVolume">
+          <span>새 영상에 초기 볼륨 적용</span>
+          <input id="setInitialVolume" type="checkbox" data-setting="setInitialVolume" />
+        </label>
+        <label class="settings__field settings__field--volume" for="volume">
+          초기 볼륨 <output id="volumeValue" for="volume">50%</output>
+          <input id="volume" type="range" min="0" max="100" step="1" data-setting="volume" />
+        </label>
+        <p class="settings__hint">재생 중 직접 조절한 볼륨은 유지됩니다.</p>
+        <label class="settings__toggle" for="autoplay">
+          <span>다음 동영상 자동 재생</span>
+          <input id="autoplay" type="checkbox" data-setting="autoplay" />
+        </label>
+      </section>
+
+      <section class="settings__section" aria-labelledby="other-heading">
+        <h2 id="other-heading">기타</h2>
+        <label class="settings__toggle" for="convertShorts">
+          <span>Shorts를 일반 영상으로 열기</span>
+          <input id="convertShorts" type="checkbox" data-setting="convertShorts" />
+        </label>
+        <label class="settings__toggle" for="disableAutoDubbing">
+          <span>자동 더빙 끄기</span>
+          <input id="disableAutoDubbing" type="checkbox" data-setting="disableAutoDubbing" />
+        </label>
+      </section>
+
+      <p class="settings__status" id="status" role="status" aria-live="polite"></p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "youtube-enhancer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "YouTube playback preferences for Chrome and Firefox",
+  "scripts": {
+    "build": "node scripts/package.mjs --source-only",
+    "format": "prettier --write \"**/*.{js,mjs,json,css,html,md}\"",
+    "format:check": "prettier --check \"**/*.{js,mjs,json,css,html,md}\"",
+    "lint": "eslint .",
+    "package": "node scripts/package.mjs",
+    "preinstall": "npx only-allow pnpm",
+    "test": "node --test",
+    "update": "pnpm dlx npm-check-updates",
+    "upgrade": "pnpm dlx npm-check-updates -u && pnpm install"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "fflate": "0.8.3",
+    "html-minifier-terser": "^7.2.0",
+    "prettier": "^3.9.10",
+    "prettier-eslint": "^17.1.2"
+  },
+  "packageManager": "pnpm@12.14.0",
+  "engines": {
+    "node": ">=20.12",
+    "npm": "Use pnpm instead of npm."
+  }
+}
