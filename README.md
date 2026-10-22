@@ -15,6 +15,8 @@ If you already installed the CRX, record your settings before removing it. Remov
 
 Click the **YouTube Enhancer** toolbar icon to open the settings tab. Saved settings also apply to open YouTube players.
 
+Enable **스크린샷 버튼 활성화하기** to add a camera button immediately left of YouTube's autoplay control. Clicking it saves a JPG of the current frame at the playing video's pixel dimensions to the browser's Downloads folder. Protected or cross-origin video may block frame capture.
+
 ## Development checks
 
 ```sh

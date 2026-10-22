@@ -10,4 +10,5 @@ globalThis.YouTubeEnhancerDefaults = Object.freeze({
   convertShorts: true,
   autoplay: false,
   disableAutoDubbing: true,
+  enableScreenshot: false,
 });

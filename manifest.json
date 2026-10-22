@@ -11,7 +11,7 @@
       }
     }
   },
-  "permissions": ["storage"],
+  "permissions": ["storage", "downloads"],
   "host_permissions": ["https://www.youtube.com/*", "https://www.youtube-nocookie.com/*"],
   "action": {
     "default_title": "YouTube Enhancer 설정"
@@ -36,7 +36,7 @@
       "matches": ["https://www.youtube.com/*", "https://www.youtube-nocookie.com/embed/*"],
       "all_frames": true,
       "run_at": "document_start",
-      "js": ["src/defaults.js", "src/settings.js"]
+      "js": ["src/defaults.js", "src/settings.js", "src/screenshot.js"]
     }
   ]
 }
